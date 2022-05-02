@@ -11,7 +11,7 @@ public class SortExperiments {
         //app.sortBalls1();
         //app.sort3();
         //app.sort4();
-        app.sortBalls2();
+        //app.sortBalls2();
         //app.sortBalls3();
 
         //app.sortPersons1();
@@ -78,7 +78,6 @@ public class SortExperiments {
 
     public void sortBalls2() {
 
-
         // Opret array af Ball objekter (med tilfældig brightness)
         Ball[] ballsarray = new Ball[8];
         for(int i=0; i < ballsarray.length; i++) {
@@ -95,12 +94,19 @@ public class SortExperiments {
 
     public void sortBalls3() {
         // Opret array af Ball objekter (med tilfældig brightness)
-        Ball[] ballsarray = new Ball[8];
+        Sammenlignbar[] ballsarray = new Sammenlignbar[8];
         for(int i=0; i < ballsarray.length; i++) {
             ballsarray[i] = new Ball();
         }
 
+
+        System.out.println("Før sortering: " + Arrays.toString(ballsarray));
+        QuickSortSammenlignbar sorter = new QuickSortSammenlignbar();
+        sorter.sort(ballsarray);
+        System.out.println("Efter sortering: " + Arrays.toString(ballsarray));
+
         // TODO: Skriv koden til sorteringsøvelse ball-sorter3 (med quicksort-sammenlignbar) her:
+
 
     }
 
@@ -113,6 +119,8 @@ public class SortExperiments {
         System.out.println("Før sortering: " + Arrays.toString(arr));
         // TODO: Sorter array af personer med quickSort
 
+        QuickSortSammenlignbar sorter = new QuickSortSammenlignbar();
+        sorter.sort(arr);
         System.out.println("Efter sortering: " + Arrays.toString(arr));
 
     }
@@ -125,6 +133,7 @@ public class SortExperiments {
 
         System.out.println("Før sortering: " + Arrays.toString(arr));
         // TODO: Sorter array af personer med Arrays.sort
+        Arrays.sort(arr);
 
         System.out.println("Efter sortering: " + Arrays.toString(arr));
 
